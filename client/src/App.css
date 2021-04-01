@@ -1,0 +1,12 @@
+.App{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 200%;
+  height: 100vh;
+  gap: 15px;
+  padding: 20px;
+  background: linear-gradient(to right, rgba(0,0,0, 0.6), rgba(0,0,0,0.6)),url(./images/pic1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}

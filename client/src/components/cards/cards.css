@@ -1,0 +1,115 @@
+.my_card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 300px;
+    height: auto;
+    padding: 10px;
+    border-radius: 3px;
+    background: #ebecf0;
+}
+.my_card .card_heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.my_card .card_heading .title{
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.my_card .card_heading button{
+    border: none;
+    outline: none;
+}
+.my_card .card_body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: auto;
+   flex-direction: column;
+}
+.my_card .card_body .list{
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   width: 95%;
+   height: auto;
+   padding: 10px;
+   background: white;
+   margin: 5px 0;
+   border-radius: 5px;
+   border-bottom: 1px solid black;
+}
+.my_card .card_add{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%; 
+   height: 130px;
+}
+.my_card .card_add form{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%; 
+   height: 100%;
+   flex-direction: column;
+}
+.my_card .card_add form input{
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   width: 100%; 
+   height:30%;
+   border-radius: 5px;
+   margin: 10px 0;
+   border: 2px solid #077cc0;
+}
+.my_card .card_add form .card_add_footer{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+}
+.my_card .card_add form .card_add_footer .left button,.my_card .card_add form .card_add_footer .right button{
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.my_card .card_add form .card_add_footer .left button[type="Submit"]{
+    background: #5aac44;
+    color: white;
+    border-radius: 5px;
+}
+.my_card .card_footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.my_card .card_footer .footer_button{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width:90%;
+    height: 100%;
+    padding: 8px 0;
+    border-radius: 3px;
+    font-size: 1.1rem;
+    color: #7b8699;
+    border: none;
+    outline: none;
+    transition: 0.5s;
+    background: transparent;
+    cursor: pointer;
+    gap:10px;
+}
+.my_card .card_footer .footer_button:hover{
+    background: #bdc3c7;
+}
