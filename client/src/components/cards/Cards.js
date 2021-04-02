@@ -10,7 +10,7 @@ function Cards({title}) {
     const [data, setData] = useState([]);
     
       useEffect(() => {
-        return console.log(data)
+    
       },[data])
 
 
@@ -29,15 +29,13 @@ function Cards({title}) {
         e.preventDefault()
         const id=Math.floor(Math.random()*1000)
         setData([...data,{id:id,title:input}])
-        setInput('abc')
         setAddButton(false)
         cardFooter.current.style.visibility="visible"
 }
     const showLists=(el)=>{
-        console.log(el)
         if(el===[]||el===''){
             return (
-                <div>no</div>
+                <div></div>
             )
         }else{
          return el.map((item,index)=>{

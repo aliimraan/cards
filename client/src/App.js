@@ -3,25 +3,28 @@ import React,{useState,useEffect} from 'react'
 import Cards from './components/cards/Cards';
 import { FaEllipsisH,FaTimes,FaPlus } from "react-icons/fa";
 import './components/addCard/addCard.css'
+import {useDispatch,useSelector} from 'react-redux'
+import {addCard} from './actions/AllCards'
 
 function App() {
   const [addButton,setAddButton]=useState(false)
   const [addCard,setAddCard]=useState(false)
   const [input,setInput]=useState('')
-  const [data, setData] = useState([
-    {id: 1, title: 'to do'},
-    {id: 2, title: 'doing'},
-    {id: 3, title: 'done'},
-  ]);
+  const dispatch=useDispatch()
+  const data=useSelector(state=>state.)
+  // const [data, setData] = useState([
+  //   {id: 1, title: 'to do'},
+  //   {id: 2, title: 'doing'},
+  //   {id: 3, title: 'done'},
+  // ]);
 
   useEffect(() => {
-    return console.log(data)
+
   },[data])
 
   const showCards=(el)=>{
-    console.log(el)
     if(el===[]||el===undefined){
-      return 'sorry'
+      return ''
     }else{
       return el.map((item,index)=>{
         return(
@@ -42,8 +45,13 @@ function App() {
   const submitHandler=(e)=>{
       e.preventDefault()
       const id=Math.floor(Math.random()*1000)
-      setData([...data,{id:id,title:input}])
-      setAddCard(false)
+      const data={
+        id:id,title:input
+      }
+      dispatch(addCard(data))
+      // setData([...data,{id:id,title:input}])
+      // setAddCard(false)
+      // setInput([])
   }
 
   return (
